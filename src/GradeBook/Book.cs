@@ -1,12 +1,24 @@
 namespace GradeBook {
     using System;
     using System.Collections.Generic;
-    public class Book{
 
-        private List<double> grades;
-        public string Name;
+    public class NameOfObject{
 
-        public Book(string name){
+      public NameOfObject(string name){
+
+        Name = name;
+
+      }
+
+      public string Name{
+
+        get;
+        set;
+      }
+    }
+    public class Book : NameOfObject {
+
+        public Book(string name) : base(name){
 
             grades = new List<double>();
 
@@ -105,5 +117,10 @@ namespace GradeBook {
            return result;
         
         }
+
+
+        private List<double> grades;
+        private string name;
+
     }
 }

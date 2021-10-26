@@ -10,6 +10,8 @@ namespace GradeBook
 
            var book = new Book("Ayush Grade Book");
 
+           //var d = new Datatypes();
+
            var done = false;
 
            while(!done){
@@ -44,11 +46,11 @@ namespace GradeBook
 
            var stats = book.GetStatistics();
 
+           Console.WriteLine($"Book Name: {book.Name}");
            Console.WriteLine($"Average : {stats.Average:N2}");
            Console.WriteLine($"Max in List : {stats.High}");
            Console.WriteLine($"Min in List : {stats.Low}");     
            Console.WriteLine($"Student Grade: {stats.Letter}");      
-            
         }
     }
 }
